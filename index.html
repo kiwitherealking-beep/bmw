@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUN CHINITA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #7f8c8d;
+            transition: all 0.3s ease;
+        }
+        .tab-button:hover {
+            color: #2980b9;
+        }
+        .tab-button.active {
+            color: #2980b9;
+            border-bottom: 3px solid #2980b9;
+        }
+        .tab-content {
+            display: none;
+            line-break: anywhere;
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>YUN CHINITA</h1>
+    
+    <!-- Tab Navigation -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'tab-yun chinita')">yun chinita</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-kim kim')">kim kim</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-fey fey')">fey fey</button>
+        <button class="tab-button" onclick="openTab(event, 'tab-sey sey')">sey sey</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="tab-yun chinita" class="tab-content active">
+        <p>i love anime </p>
+        <p>my fav color is purple</p>
+        <p>i fucking love space</p>
+        <p>my new taste of music is gng shit like westside</p>
+        <p>i love to draw</p>
+    </div>
+
+    <div id="tab-kim kim" class="tab-content">
+        <p>me Dombon pvh</p>
+        <p>strong like superr</p>
+        <p>key nv ah fey he</p>
+        <p>i want you to help me build our web if you r not bc</p>
+    </div>
+
+    <div id="tab-fey fey" class="tab-content">
+        <p>PVH STEM LEADER</p>
+        <p>Jon pr oy sl knea muy ss kan ta ban yu</p>
+        <p>hav me tv ka phg</p>
+        <p>if you ot bc help me build the web toooo</p>
+    </div>
+
+    <div id="tab-sey sey" class="tab-content">
+        <p>kmeng 12 days os streak muy cr</p>
+        <p>just watch one piece</p>
+        <p>just watch one piece</p>
+        <p>just watch one piece</p>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabId) {
+        // Hide all tab contents
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Remove active class from all buttons
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabId).classList.add('active');
+        evt.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
